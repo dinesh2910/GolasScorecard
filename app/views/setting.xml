@@ -1,0 +1,57 @@
+<Alloy>
+	<Window class="container2" exitOnClose="true" barColor="#000">
+	    
+        <View id="backgroundSpaceColor"/>
+        <Label id="gameSettings">SETTINGS</Label>
+        
+        
+        <Label id="theLabel">Disable Screen Lock:</Label>
+        <Switch id="turnOffIdle" value="true" onChange="disableLock"/></Switch>
+        <alertDialog id= "dialog" cancel = "0" onclick="turnoffScreenSaver" title = "Screen Saver Disabled" message = "This is going to diable you rscreen saver are you sure you want to continue with that?"
+        <ButtonNames>
+        	<ButtonName>No</ButtonName>
+        	<ButtonName>Yes</ButtonName>
+        	
+        </ButtonNames>
+        
+        
+        
+        </alertDialog>
+        
+        <Label id="soundLabel">Sound Comments On/Off:</Label>
+        <Switch id="turnOffSound" value=""/>
+        
+        
+        <Label id="increaseByLabel">Increase by amount:</Label>
+        <TextField id="increaseByNum" borderColor="#C5C5C5" value="1" keyboardType="Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION" /></TextField>
+        <Picker id="picker" onChange="figurevalue">
+        	<PickerRow title="One"></PickerRow>
+        	<PickerRow title="Two"></PickerRow>
+        	<PickerRow title="Three"></PickerRow>
+        	<PickerRow title="Four"></PickerRow>
+        	<PickerRow title="Five"></PickerRow>
+        	
+        </Picker>
+        
+       /*Not given Functionallity for the colros*/
+        <Label id="backgroundColorLabel">Choose Background Theme:</Label>
+        <View id="redView"></View>
+        <View id="blueView"></View>
+        <View id="greenView"></View>
+        <View id="purpleView"></View>
+        <View id="pinkView"></View>
+        
+       
+        <ImageView id="soccerView" onClick="updateBackground" image="images/soccer_thumb.png"></ImageView>
+        <ImageView id="footballView" onClick="updateBackground" image="images/football_thumb.png"></ImageView>
+        <ImageView id="basketballView" onClick="updateBackground" image="images/Basketball_Thumb.png"></ImageView>
+        <ImageView id="foosballView"onClick="updateBackground" image="images/Foosball_Thumb.png"></ImageView>
+                
+        
+        <View id="lineItem"/>
+       
+        <Button id="closeBTN" title="Done" onClick="closeSettings">
+        	
+        </Button>
+	</Window>
+</Alloy>

@@ -1,0 +1,47 @@
+<Alloy>
+	<Window class="container">
+		
+	
+        <Toolbar platform="ios" top="0" borderBottom="true" barColor="#F4F4F4">
+            <Items>
+                
+                <Button id="resetBTN" onClick = "clearScore"/></Button>
+                
+                <FlexSpace/>
+                
+                <ImageView id="SC_Logo" image="images/SC_Logo_Long.png"></ImageView>
+                <FlexSpace/>
+                
+                <Button id="settingsButton" onClick="openSettings"></Button>
+            </Items>
+        </Toolbar> 
+      
+        
+       
+        <View id="scoreBackR" onSwipe = "deteremineSwipeRight">
+                <View id="backSectionR"></View>
+                <TextField id="scoreRText" value="0"></TextField>
+                <View id="topTitleBarR">
+                    <TextField id="team2Label" value="Red Team"></TextField>
+                </View>
+                <Button id="plusTeam2" title="" onClick="addPointBlue"/></Button>
+                
+                <Button id="minusTeam2" title="" onClick="miinusPointBlue"/></Button>
+                
+        </View>
+        
+        <View id="scoreBackL" onSwipe = "deteremineSwipeLeft">
+                <View id="backSectionL"></View>
+                <TextField id="scoreLText" value="0"></TextField>
+                <View id="topTitleBarL">
+                    <TextField id="team1Label" value="Blue Team"></TextField>
+                </View>
+                <Button id="plusTeam1" title="" onClick = "addPointRed"/></Button>
+                <Button id="minusTeam1" title=""/ onClick="minusPointRed"></Button>
+        </View>
+        
+      
+        <Label id="vsLabel">VS</Label>
+		
+	</Window>
+</Alloy>
